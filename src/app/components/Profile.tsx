@@ -1,15 +1,19 @@
 import React from 'react';
 
 export interface ProfileProps {
-  name: string;
+  username: string;
   bio: string;
+  profile_url:string;
+  role:string;
 }
 
-const Profile: React.FC<ProfileProps> = ({ name, bio }) => {
+const Profile: React.FC<ProfileProps> = ({ username, bio, profile_url, role }) => {
   return (
     <div className="profile">
-      <h3>{name}</h3>
+      <img src={profile_url} width={50}></img>
+      <h3>{username}</h3>
       <p>{bio}</p>
+      <span>{role}</span>
     </div>
   );
 };
