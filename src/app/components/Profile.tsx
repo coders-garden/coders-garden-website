@@ -23,7 +23,7 @@ const Profile: React.FC<ProfileProps> = ({ username, bio, profile_pic_url, role,
         <h3>{username}</h3>
       </Link>
         <p>{bio}</p>
-        <span>{role}</span>
+      {*<span>{role}</span>*}
     </div>
   );
 };
