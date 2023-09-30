@@ -10,6 +10,7 @@ import {
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import HeaderAnimation from "./HeaderAnimation";
 
 const NavBar = () => {
 	return (
@@ -58,6 +59,7 @@ const Header: React.FC = () => {
 				Coders Garden
 			</Link>
 			<NavBar />
+			<HeaderAnimation />
 		</header>
 	);
 };

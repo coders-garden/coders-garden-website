@@ -11,8 +11,6 @@ export default function CommunityUpdateButton() {
 	const { data: session } = useSession();
 	const [updateProfilesLoading, setUpdateProfilesLoading] = useState(false);
 
-	console.log("session", session, "CommunityUpdateButton");
-
 	function updateCommunity() {
 		setUpdateProfilesLoading(true);
 		makeComunityUpdateRequest();

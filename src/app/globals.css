@@ -31,6 +31,18 @@ body {
 		rgb(var(--background-start-rgb));
 } */
 
+.line{
+	overflow: hidden;
+}
+
+.word{
+	/* transform: translate(0, -100%); */
+}
+
+.char{
+	transform: translate(0, -100%);
+}
+
 @layer base {
 	:root {
 		--background: 0 0% 100%;
