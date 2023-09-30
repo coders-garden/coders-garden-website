@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/toggle-theme";
 import Link from "next/link";
 import React from "react";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import AuthButton from "./AuthButton";
 
 const Header: React.FC = () => {
@@ -13,10 +12,10 @@ const Header: React.FC = () => {
 			</Link>
 			<nav className="flex gap-3">
 				<Button variant={"link"}>
-					<Link href="/about">About</Link>
+					<Link href="#about">About</Link>
 				</Button>
 				<Button variant={"link"}>
-					<Link href="/community">Community</Link>
+					<Link href="#community">Community</Link>
 				</Button>
 				<AuthButton />
 				<ThemeToggle />
