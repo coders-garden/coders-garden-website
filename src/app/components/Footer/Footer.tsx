@@ -1,7 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import github_white from "./github-mark-white.png";
-import discord from "./discord.png";
 import Link from "next/link";
 import { DiscordLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 
