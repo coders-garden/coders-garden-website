@@ -8,7 +8,7 @@ import Members from './components/Members';
 
 const Home: React.FC = () => {
   return (
-    <div className='px-32'>
+    <div className='px-5 max-w-6xl m-auto'>
       <Header />
       <Hero />
       <About />

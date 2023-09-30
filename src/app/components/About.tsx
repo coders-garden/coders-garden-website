@@ -6,8 +6,8 @@ const About: React.FC = () => {
 			className="py-16 text-center min-h-screen flex flex-col justify-center items-center"
 			id="about"
 		>
-			<h2 className="text-9xl font-extrabold">About Us</h2>
-			<p className="text-lg text-muted-foreground font-semibold">
+			<h2 className="text-6xl md:text-8xl lg:text-9xl font-extrabold">About Us</h2>
+			<p className="text-muted-foreground font-semibold md:text-lg lg:text-xl">
 				We are a fantastic team doing great things.
 			</p>
 		</section>
