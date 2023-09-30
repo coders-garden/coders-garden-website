@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import HeaderAnimation from "./HeaderAnimation";
+import { secondary } from "@/app/fonts";
 
 const NavBar = () => {
 	return (
@@ -56,7 +57,7 @@ const Header: React.FC = () => {
 	return (
 		<header className="fixed top-0 left-0 w-full px-5  backdrop-blur-xl bg-white/0.5 z-10">
 			<div className="flex justify-between items-center py-5 max-w-6xl m-auto">
-				<Link href="/" className="text-lg font-bold">
+				<Link href="/" className={"text-lg font-bold" + " " + secondary.className }>
 					Coders Garden
 				</Link>
 				<NavBar />

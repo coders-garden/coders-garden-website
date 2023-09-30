@@ -8,6 +8,7 @@ import {
 	CardHeader,
 } from "@/components/ui/card";
 import CommunityUpdateButton from "./CommunityMemberUpdateButton";
+import { secondary } from "@/app/fonts";
 export interface ProfileProps {
 	username: string;
 	name: string;
@@ -49,7 +50,7 @@ const Profile: React.FC<ProfileProps> = ({
 							</AvatarFallback>
 						</Avatar>
 						<span>
-							<h3 className="text-lg font-bold">
+							<h3 className={"text-lg font-bold" + " " + secondary.className}>
 								{name ?? username}
 							</h3>
 							<CardDescription className="font-bold">

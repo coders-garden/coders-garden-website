@@ -1,11 +1,9 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { getServerSession } from "next-auth";
 import SessionProvider from "./components/SessionProvider";
-
-const inter = Inter({ subsets: ["latin"] });
+import { primary } from "@/app/fonts";
 
 export const metadata: Metadata = {
 	title: "Coders Garden",
@@ -20,7 +18,7 @@ export default async function RootLayout({
 	const session = await getServerSession();
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className={primary.className}>
 				<SessionProvider session={session}>
 					<ThemeProvider
 						attribute="class"
