@@ -7,6 +7,7 @@ import {
 	CardDescription,
 	CardHeader,
 } from "@/components/ui/card";
+import CommunityUpdateButton from "./CommunityMemberUpdateButton";
 export interface ProfileProps {
 	username: string;
 	name: string;
@@ -33,32 +34,35 @@ const Profile: React.FC<ProfileProps> = ({
 	return (
 		<Card className="profile">
 			<CardHeader>
-				<Link
-					href={github_link}
-					className="flex gap-3 items-center w-fit"
-				>
-					<Avatar>
-						<AvatarImage
-							src={profile_pic_url}
-							alt={"profile pic of " + username}
-						/>
-						<AvatarFallback>
-							{username[0].toUpperCase()}
-						</AvatarFallback>
-					</Avatar>
-					<span>
-						<h3 className="text-lg font-bold">
-							{name ?? username}
-						</h3>
-						<CardDescription className="font-bold">
-							Repositories: {repositories}
-						</CardDescription>
-						<CardDescription className="text-xs font-light">
-							<span>Followers: {followers}</span>{" "}
-							<span>Following: {following}</span>
-						</CardDescription>
-					</span>
-				</Link>
+				<div className="flex justify-between items-center">
+					<Link
+						href={github_link}
+						className="flex gap-3 items-center w-fit"
+					>
+						<Avatar>
+							<AvatarImage
+								src={profile_pic_url}
+								alt={"profile pic of " + username}
+							/>
+							<AvatarFallback>
+								{username[0].toUpperCase()}
+							</AvatarFallback>
+						</Avatar>
+						<span>
+							<h3 className="text-lg font-bold">
+								{name ?? username}
+							</h3>
+							<CardDescription className="font-bold">
+								Repositories: {repositories}
+							</CardDescription>
+							<CardDescription className="text-xs font-light">
+								<span>Followers: {followers}</span>{" "}
+								<span>Following: {following}</span>
+							</CardDescription>
+						</span>
+					</Link>
+					<CommunityUpdateButton githubUsername={username} />
+				</div>
 			</CardHeader>
 			<CardContent>
 				<p>{bio}</p>
