@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+	/* for debugging purpose only */
+	/* border: 1px solid red; */
+}
+
 /* :root {
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
@@ -25,6 +30,18 @@ body {
 		)
 		rgb(var(--background-start-rgb));
 } */
+
+.line{
+	overflow: hidden;
+}
+
+.word{
+	/* transform: translate(0, -100%); */
+}
+
+.char{
+	transform: translate(0, -100%);
+}
 
 @layer base {
 	:root {
