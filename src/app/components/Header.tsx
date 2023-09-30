@@ -3,6 +3,7 @@ import { ThemeToggle } from "@/components/ui/toggle-theme";
 import Link from "next/link";
 import React from "react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import AuthButton from "./AuthButton";
 
 const Header: React.FC = () => {
 	return (
@@ -17,12 +18,7 @@ const Header: React.FC = () => {
 				<Button variant={"link"}>
 					<Link href="/community">Community</Link>
 				</Button>
-				<Link href="/login">
-					<Button className="flex justify-between items-center gap-3">
-						<GitHubLogoIcon className="h-[1.2rem] w-[1.2rem]" />
-						Github Login
-					</Button>
-				</Link>
+				<AuthButton />
 				<ThemeToggle />
 			</nav>
 		</header>

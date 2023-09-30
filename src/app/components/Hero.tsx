@@ -15,9 +15,13 @@ const Hero: React.FC = () => {
 			</p>
 			<div className="my-12">
 				<Button>
-					<Link href={"/discord"} className="flex justify-between items-center gap-3">
-            <DiscordLogoIcon className="h-[1.2rem] w-[1.2rem]" /> Join our Discord
-          </Link>
+					<Link
+						href={String(process.env.DISCORD_INVITE_LINK)}
+						className="flex justify-between items-center gap-3"
+					>
+						<DiscordLogoIcon className="h-[1.2rem] w-[1.2rem]" />{" "}
+						Join our Discord
+					</Link>
 				</Button>
 			</div>
 		</section>
