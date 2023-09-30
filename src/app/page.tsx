@@ -1,30 +1,14 @@
 import React from 'react';
 import './globals.css'
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import About from './components/About';
-import Members from './components/Members';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Hero from './components/Hero/Hero';
+import About from './components/About/About';
+import Members from './components/Community/Members';
 
 const Home: React.FC = () => {
-  // const profiles = [
-  //   // Your profile data here
-  //   {
-  //     name: 'kirtan',
-  //     bio: 'devloper',
-  //   },
-  //   {
-  //     name: 'pratham',
-  //     bio: 'devloper',
-  //   },
-  //   {
-  //     name: 'ram',
-  //     bio: 'devloper',
-  //   }
-  // ];
-
   return (
-    <div>
+    <div className='px-5 max-w-6xl m-auto'>
       <Header />
       <Hero />
       <About />
