@@ -25,7 +25,7 @@ const NavBar = () => {
 				<ThemeToggle />
 			</nav>
 			<nav className="ml-auto md:hidden">
-				<DropdownMenu className="">
+				<DropdownMenu>
 					<DropdownMenuTrigger asChild>
 						<Button variant="outline">
 							<HamburgerMenuIcon className="h-[1.2rem] w-[1.2rem]" />
