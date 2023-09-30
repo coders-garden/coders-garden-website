@@ -1,20 +1,32 @@
-import React from 'react';
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/toggle-theme";
+import Link from "next/link";
+import React from "react";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const Header: React.FC = () => {
-  return (
-    <header className="text-white py-4">
-      <div className="container mx-auto flex space-x-6">
-        <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Coders Garden</span></h1>
-        <nav className="mt-2">
-          <ul className="flex space-x-4">
-            <li><a href="#" className="hover:text-blue-200">Home</a></li>
-            <li><a href="#" className="hover:text-blue-200">About</a></li>
-            <li><a href="#" className="hover:text-blue-200">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  );
+	return (
+		<header className="flex justify-between items-center py-12">
+			<Link href="/" className="text-lg font-bold">
+				Coders Garden
+			</Link>
+			<nav className="flex gap-3">
+				<Button variant={"link"}>
+					<Link href="/about">About</Link>
+				</Button>
+				<Button variant={"link"}>
+					<Link href="/community">Community</Link>
+				</Button>
+				<Link href="/login">
+					<Button className="flex justify-between items-center gap-3">
+						<GitHubLogoIcon className="h-[1.2rem] w-[1.2rem]" />
+						Github Login
+					</Button>
+				</Link>
+				<ThemeToggle />
+			</nav>
+		</header>
+	);
 };
 
 export default Header;
