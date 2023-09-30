@@ -54,12 +54,14 @@ const NavBar = () => {
 
 const Header: React.FC = () => {
 	return (
-		<header className="flex justify-between items-center py-5 relative">
-			<Link href="/" className="text-lg font-bold">
-				Coders Garden
-			</Link>
-			<NavBar />
-			<HeaderAnimation />
+		<header className="fixed top-0 left-0 w-full px-5  backdrop-blur-xl bg-white/0.5 z-10">
+			<div className="flex justify-between items-center py-5 max-w-6xl m-auto">
+				<Link href="/" className="text-lg font-bold">
+					Coders Garden
+				</Link>
+				<NavBar />
+				<HeaderAnimation />
+			</div>
 		</header>
 	);
 };
