@@ -7,24 +7,8 @@ import About from './components/About';
 import Members from './components/Members';
 
 const Home: React.FC = () => {
-  // const profiles = [
-  //   // Your profile data here
-  //   {
-  //     name: 'kirtan',
-  //     bio: 'devloper',
-  //   },
-  //   {
-  //     name: 'pratham',
-  //     bio: 'devloper',
-  //   },
-  //   {
-  //     name: 'ram',
-  //     bio: 'devloper',
-  //   }
-  // ];
-
   return (
-    <div>
+    <div className='px-32'>
       <Header />
       <Hero />
       <About />

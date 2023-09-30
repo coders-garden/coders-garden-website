@@ -1,14 +1,17 @@
-import React from 'react';
+import React from "react";
 
 const About: React.FC = () => {
-    return (
-        <section>
-            <div className="container mx-auto text-center">
-                <h2 className="text-2xl font-semibold"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">About Us</span></h2>
-                <p className="mt-4">We are a fantastic team doing great things.</p>
-            </div>
-        </section>
-    );
+	return (
+		<section
+			className="py-16 text-center min-h-screen flex flex-col justify-center items-center"
+			id="about"
+		>
+			<h2 className="text-9xl font-extrabold">About Us</h2>
+			<p className="text-lg text-muted-foreground font-semibold">
+				We are a fantastic team doing great things.
+			</p>
+		</section>
+	);
 };
 
 export default About;

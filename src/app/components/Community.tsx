@@ -1,23 +1,27 @@
-import React from 'react';
-import Profile, { ProfileProps } from './Profile';
+import React from "react";
+import Profile, { ProfileProps } from "./Profile";
+import { Card } from "@/components/ui/card";
 
 interface CommunityProps {
-  profiles: ProfileProps[];
+	profiles: ProfileProps[];
 }
 
 const Community: React.FC<CommunityProps> = ({ profiles }) => {
-  return (
-    <section className="py-8">
-      <div className="container mx-auto">
-        <h2 className="text-2xl font-semibold text-center mb-4"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Community</span></h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {profiles.map((profile, index) => (
-            <Profile key={index} {...profile} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+	return (
+		<section
+			className="min-h-screen flex flex-col justify-center items-center"
+			id="community"
+		>
+				<h2 className="text-9xl font-extrabold">
+					Community
+				</h2>
+				<div className="my-24 grid grid-cols-3 gap-3">
+					{profiles.map((profile, index) => (
+						<Profile key={index} {...profile} />
+					))}
+				</div>
+		</section>
+	);
 };
 
 export default Community;
