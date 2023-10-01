@@ -12,14 +12,16 @@ interface CommunityProps {
 const Community: React.FC<CommunityProps> = ({ profiles }) => {
 	return (
 		<section
-			className={
-				"min-h-screen flex flex-col justify-center items-center" +
-				" " +
-				secondary.className
-			}
+			className="min-h-screen flex flex-col justify-center items-center"
 			id="community"
 		>
-			<h2 className="text-6xl md:text-8xl lg:text-9xl font-extrabold flex justify-center flex-wrap items-center gap-5">
+			<h2
+				className={
+					"text-6xl md:text-8xl lg:text-9xl font-extrabold flex justify-center flex-wrap items-center gap-5" +
+					" " +
+					secondary.className
+				}
+			>
 				Community
 				<CommunityUpdateButton />
 			</h2>

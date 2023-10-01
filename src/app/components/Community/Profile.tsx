@@ -7,8 +7,8 @@ import {
 	CardDescription,
 	CardHeader,
 } from "@/components/ui/card";
-import CommunityUpdateButton from "./CommunityMemberUpdateButton";
 import { secondary } from "@/app/fonts";
+import CommunityMemberUpdateButton from "./CommunityMemberUpdateButton";
 export interface ProfileProps {
 	username: string;
 	name: string;
@@ -35,7 +35,13 @@ const Profile: React.FC<ProfileProps> = ({
 	return (
 		<Card className="profile">
 			<CardHeader>
-				<div className="flex justify-between items-center">
+				<div
+					className={
+						"flex justify-between items-center" +
+						" " +
+						secondary.className
+					}
+				>
 					<Link
 						href={github_link}
 						className="flex gap-3 items-center w-fit"
@@ -50,7 +56,7 @@ const Profile: React.FC<ProfileProps> = ({
 							</AvatarFallback>
 						</Avatar>
 						<span>
-							<h3 className={"text-lg font-bold" + " " + secondary.className}>
+							<h3 className={"text-lg font-bold"}>
 								{name ?? username}
 							</h3>
 							<CardDescription className="font-bold">
@@ -62,7 +68,11 @@ const Profile: React.FC<ProfileProps> = ({
 							</CardDescription>
 						</span>
 					</Link>
-					<CommunityUpdateButton githubUsername={username} />
+					<CommunityMemberUpdateButton
+						githubUsername={username}
+						profile_pic_url={profile_pic_url}
+						owner={role.toLowerCase() === "owner"}
+					/>
 				</div>
 			</CardHeader>
 			<CardContent>
