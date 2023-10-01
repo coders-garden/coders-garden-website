@@ -9,11 +9,9 @@ import amiadminRequest from "@/utils/amiadminRequest";
 export default function CommunityMemberUpdateButton({
 	githubUsername,
 	profile_pic_url,
-	owner
 }: {
 	githubUsername: string;
 	profile_pic_url: string;
-	owner: boolean;
 }) {
 	const { data: session } = useSession();
 	const [updateProfilesLoading, setUpdateProfilesLoading] = useState(false);
@@ -32,7 +30,7 @@ export default function CommunityMemberUpdateButton({
 		setAmiadmin(getAmiadmin === "true");
 	}, [getAmiadmin]);
 
-	if ((session && session.user?.image === profile_pic_url) || amiadmin){
+	if ((session && session.user?.image === profile_pic_url) || (session && amiadmin)){
 		return (
 			<Button onClick={updateCommunity}>
 				<UpdateIcon
