@@ -21,7 +21,13 @@ export default function CommunityUpdateButton() {
 		if (!session) return;
 		amiadminRequest({
 			profile_pic_url: session?.user?.image ?? "",
-		}).then((res: any) => setAmiadmin(res.data.admin as boolean));
+		}).then((res: any) => {
+			setAmiadmin(res.data.admin as boolean);
+			localStorage.setItem(
+				"amiadmin",
+				(res.data.admin as boolean) ? "true" : "false"
+			);
+		});
 	}, [session]);
 
 	if (session && amiadmin) {

@@ -17,7 +17,8 @@ export default function CommunityMemberUpdateButton({
 }) {
 	const { data: session } = useSession();
 	const [updateProfilesLoading, setUpdateProfilesLoading] = useState(false);
-	const [amiadmin, setAmiadmin] = useState(false);
+	const getAmiadmin = localStorage.getItem("amiadmin");
+	const [amiadmin, setAmiadmin] = useState<boolean>(false);
 
 	async function updateCommunity() {
 		setUpdateProfilesLoading(true);
@@ -28,11 +29,8 @@ export default function CommunityMemberUpdateButton({
 	}
 
 	useEffect(() => {
-		if (!session) return;
-		amiadminRequest({
-			profile_pic_url: session?.user?.image ?? "",
-		}).then((res: any) => setAmiadmin(res.data.admin as boolean));
-	}, [session]);
+		setAmiadmin(getAmiadmin === "true");
+	}, [getAmiadmin]);
 
 	if ((session && session.user?.image === profile_pic_url) || amiadmin){
 		return (
