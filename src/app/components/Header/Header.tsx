@@ -12,6 +12,8 @@ import {
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import HeaderAnimation from "./HeaderAnimation";
 import { secondary } from "@/app/fonts";
+import logo from "@/app/components/Header/Assets/logo.png";
+import Image from "next/image";
 
 const NavBar = () => {
 	return (
@@ -56,8 +58,13 @@ const NavBar = () => {
 const Header: React.FC = () => {
 	return (
 		<header className="fixed top-0 left-0 w-full px-5  backdrop-blur-xl bg-white/0.5 z-10">
-			<div className="flex justify-between items-center py-5 max-w-6xl m-auto">
-				<Link href="/" className={"text-lg font-bold" + " " + secondary.className }>
+			<div className="flex justify-between items-center py-3 md:py-5 max-w-6xl m-auto">
+				<Link href="/" className={"text-lg font-bold flex justify-center items-center gap-3" + " " + secondary.className }>
+					<Image
+						className="rounded-full w-12 h-12"
+						src={logo}
+						alt="Coders Garden Logo"
+					/>
 					Coders Garden
 				</Link>
 				<NavBar />
