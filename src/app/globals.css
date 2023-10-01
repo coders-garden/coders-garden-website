@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
 	/* for debugging purpose only */
 	/* border: 1px solid red; */
 }
@@ -31,16 +31,56 @@ body {
 		rgb(var(--background-start-rgb));
 } */
 
-.line{
+.line {
 	overflow: hidden;
 }
 
-.word{
+.word {
 	/* transform: translate(0, -100%); */
 }
 
-.char{
+.char {
 	transform: translate(0, -100%);
+}
+
+body {
+	overflow-x: hidden;
+}
+
+#hero-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+#hero-bg img {
+	position: absolute;
+}
+
+#hero-bg .clouds {
+	top: -20%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	mix-blend-mode: overlay;
+}
+
+#hero-bg .mountains {
+	bottom: -23%;
+}
+
+#hero-bg .garden {
+	bottom: -20%;
+}
+
+@media screen and (max-width: 768px) {
+	#hero-bg .garden,
+	#hero-bg .mountains {
+		bottom: 0%;
+	}
 }
 
 @layer base {

@@ -4,6 +4,10 @@ import React from "react";
 import { DiscordLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import HeroAnimation from "./HeroAnimation";
 import { secondary } from "@/app/fonts";
+import Image from "next/image";
+import clouds from "@/app/components/Hero/Assets/clouds.png";
+import mountains from "@/app/components/Hero/Assets/mountains.png";
+import garden from "@/app/components/Hero/Assets/garden.png";
 
 const Hero: React.FC = () => {
 	return (
@@ -11,6 +15,25 @@ const Hero: React.FC = () => {
 			className="min-h-screen flex flex-col justify-center items-center text-center"
 			id="hero"
 		>
+			<div className="h-screen w-screen overflow-hidden absolute top-0 left-0 dark:saturate-0 select-none" id="hero-bg">
+				<Image
+					className="clouds opacity-20 dark:opacity-5"
+					alt="clouds"
+					src={clouds}
+				/>
+				<Image
+					className="mountains dark:opacity-20"
+					alt="mountains"
+					src={mountains}
+				/>
+				<Image
+					className="garden"
+					alt="garden"
+					src={garden}
+					
+				/>
+			</div>
+
 			<h1
 				className={
 					"text-6xl md:text-8xl lg:text-9xl font-extrabold overflow-hidden" +
@@ -19,7 +42,7 @@ const Hero: React.FC = () => {
 				}
 				id="hero-title"
 			>
-				Welcome To <br/> Coders Garden
+				Welcome To <br /> Coders Garden
 			</h1>
 			<p
 				className="mt-4 text-muted-foreground font-medium md:text-lg lg:text-xl overflow-hidden"
