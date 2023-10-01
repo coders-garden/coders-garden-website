@@ -17,12 +17,12 @@ const Hero: React.FC = () => {
 		>
 			<div className="h-screen w-screen overflow-hidden absolute top-0 left-0 dark:saturate-0" id="hero-bg">
 				<Image
-					className="clouds"
+					className="clouds opacity-20 dark:opacity-5"
 					alt="clouds"
 					src={clouds}
 				/>
 				<Image
-					className="mountains"
+					className="mountains dark:opacity-20"
 					alt="mountains"
 					src={mountains}
 				/>

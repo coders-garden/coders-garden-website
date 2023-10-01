@@ -18,6 +18,9 @@ export default async function RootLayout({
 	const session = await getServerSession();
 	return (
 		<html lang="en">
+			<head>
+				<link rel="icon" href="./favicon.png" sizes="any" />
+			</head>
 			<body className={primary.className}>
 				<SessionProvider session={session}>
 					<ThemeProvider

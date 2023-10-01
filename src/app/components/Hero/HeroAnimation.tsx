@@ -39,6 +39,31 @@ export default function HeroAnimation() {
 				ease: "power4.out",
 			}
 		);
+
+		gsap.from("#hero-bg .garden", {
+			y: 100,
+			opacity: 0,
+			duration: 2,
+			delay: 3,
+			ease: "power4.out",
+		})
+
+		gsap.from("#hero-bg .mountains", {
+			y: 100,
+			opacity: 0,
+			duration: 2,
+			delay: 3.25,
+			ease: "power4.out",
+		})
+
+		gsap.from("#hero-bg .clouds", {
+			y: -200,
+			opacity: 0,
+			duration: 2,
+			delay: 3,
+		})
+
+
 	}, []);
 	return <></>;
 }
