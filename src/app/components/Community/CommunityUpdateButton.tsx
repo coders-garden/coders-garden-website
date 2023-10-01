@@ -43,5 +43,6 @@ export default function CommunityUpdateButton() {
 			</Button>
 		);
 	}
+	localStorage.removeItem("amiadmin");
 	return null;
 }

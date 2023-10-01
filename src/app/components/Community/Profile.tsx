@@ -71,7 +71,6 @@ const Profile: React.FC<ProfileProps> = ({
 					<CommunityMemberUpdateButton
 						githubUsername={username}
 						profile_pic_url={profile_pic_url}
-						owner={role.toLowerCase() === "owner"}
 					/>
 				</div>
 			</CardHeader>
