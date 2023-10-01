@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
 			className="min-h-screen flex flex-col justify-center items-center text-center"
 			id="hero"
 		>
-			<div className="h-screen w-screen overflow-hidden absolute top-0 left-0 dark:saturate-0" id="hero-bg">
+			<div className="h-screen w-screen overflow-hidden absolute top-0 left-0 dark:saturate-0 select-none" id="hero-bg">
 				<Image
 					className="clouds opacity-20 dark:opacity-5"
 					alt="clouds"
